@@ -97,64 +97,68 @@
         </div>
     </section>
     <!-- vision and mission -->
+    dy>
     <div class="bottom">
         <h2>Our Vision and Mission</h2>
-        <button >Vision</button>
-        <button >Mission</button>
+        <button id="vision-btn" class="tab-button active" onclick="switchTab('vision')">Vision</button>
+        <button id="mission-btn" class="tab-button " onclick="switchTab('mission')">Mission</button>
     </div>
     <!-- vision -->
-    <div class="vision-absolute">
-        <h4>Vision</h4>
-        <hr class="one">
-        <hr class="two">
-    </div>
-    <div class="vision">
-        <!-- <hr class="one"> -->
-        <div class="vision-text">
-            <p style="margin-bottom: 20px;">Pioneering sustainable practices for a better tomorrow.</p>
+    <div id="vision" class="tab-content show">
+        <div class="vision-absolute">
+            <h4>Vision</h4>
+            <hr class="one">
+            <hr class="two">
+        </div>
+        <div class="vision">
+            <!-- <hr class="one"> -->
+            <div class="vision-text">
+                <p style="margin-bottom: 20px;">Pioneering sustainable practices for a better tomorrow.</p>
 
-            <p>- Leading the Industry: Aspire to be a recognized leader in accounting and financial services.
-            </p>
-            <p> - Innovative Solutions: Embrace technology and innovation to enhance service delivery and
-                efficiency.</p>
-            <p>- Global Reach: Expand services to cater to a diverse, international client base.</p>
-            <p>- Sustainable Growth: Promote sustainable business practices that benefit clients, employees, and
-                the
-                environment.</p>
-            <p> - Empowering Clients: Enable clients to achieve their financial goals through expert guidance
-                and
-                support.</p>
-        </div>
-        <div class="vision-img">
-            <img src="assets/images/about/vision.png" alt="Vision" height="300px" width="300px">
+                <p>- Leading the Industry: Aspire to be a recognized leader in accounting and financial services.
+                </p>
+                <p> - Innovative Solutions: Embrace technology and innovation to enhance service delivery and
+                    efficiency.</p>
+                <p>- Global Reach: Expand services to cater to a diverse, international client base.</p>
+                <p>- Sustainable Growth: Promote sustainable business practices that benefit clients, employees, and
+                    the
+                    environment.</p>
+                <p> - Empowering Clients: Enable clients to achieve their financial goals through expert guidance
+                    and
+                    support.</p>
+            </div>
+            <div class="vision-img">
+                <img src="/assets/images/about/vision.png" alt="Vision" height="300px" width="300px">
+            </div>
         </div>
     </div>
-    <!-- Mission -->
-    <div class="mission">
-        <h4>Mission</h4>
-        <!-- <hr class="mission-absolute1">
-        <hr class="mission-absolute2"> -->
-    </div>
-    <div class="mission-container">
+    <!-- mission -->
+    <div id="mission" class="tab-content ">
+        <div class="mission">
+            <h4>Mission</h4>
+            <!-- <hr class="mission-absolute1">
+            <hr class="mission-absolute2"> -->
+        </div>
+        <div class="mission-container">
 
-        <div class="mission-img">
-            <img src="assets/images/about/mission.png" alt="mission" height="300px" width="550px">
-        </div>
-        <!-- <hr class="one"> -->
-        <div class="mission-text">
-            <p style="margin-bottom: 20px;">Building lasting relationships through exceptional service.</p>
-            <p>- Integrity and Ethics: Uphold the highest standards of integrity and professionalism in all
-                services.</p>
-            <p> - Client-Centric Approach: Provide tailored solutions that meet the unique needs of each client.
-            </p>
-            <p> - Quality Service: Deliver accurate, timely, and reliable accounting and advisory services.</p>
-            <p>- Continuous Improvement: Foster a culture of ongoing learning and development for staff and
-                clients.</p>
-            <p> - Community Impact: Contribute positively to the communities served through ethical practices
-                and corporate responsibility.</p>
+            <div class="mission-img">
+                <img src="/assets/images/about/mission.png" alt="mission" height="300px" width="550px">
+            </div>
+            <!-- <hr class="one"> -->
+            <div class="mission-text">
+                <p style="margin-bottom: 20px;">Building lasting relationships through exceptional service.</p>
+                <p>- Integrity and Ethics: Uphold the highest standards of integrity and professionalism in all
+                    services.</p>
+                <p> - Client-Centric Approach: Provide tailored solutions that meet the unique needs of each client.
+                </p>
+                <p> - Quality Service: Deliver accurate, timely, and reliable accounting and advisory services.</p>
+                <p>- Continuous Improvement: Foster a culture of ongoing learning and development for staff and
+                    clients.</p>
+                <p> - Community Impact: Contribute positively to the communities served through ethical practices
+                    and corporate responsibility.</p>
+            </div>
         </div>
     </div>
-
     <h2 class="proprietor"> Know the Proprietor</h2>
     <div class="proprietor-container">
 
@@ -193,52 +197,73 @@
 
 
     </div>
-        <!-- footer -->
-        <footer>
-            <div class="footer-wraper">
-                <div class="footer-container">
-                    <div class="left-side">
-                        <h3>Our Head Office</h3>
-                        <p>
-                            <i class="fa fa-map-marker-alt"></i>F75J+32R, Hanuman Das
-                            Marg, Biratnagar 56613
-                        </p>
-                        <p>
-                            <i class="fa fa-phone-alt"></i>+977 9852075322
-                        </p>
-                        <p><i class="fa fa-envelope"></i>info@p-lunia.com</p>
-                        <div class="footer-social">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-    
+    <!-- footer -->
+    <footer>
+        <div class="footer-wraper">
+            <div class="footer-container">
+                <div class="left-side">
+                    <h3>Our Head Office</h3>
+                    <p>
+                        <i class="fa fa-map-marker-alt"></i>F75J+32R, Hanuman Das
+                        Marg, Biratnagar 56613
+                    </p>
+                    <p>
+                        <i class="fa fa-phone-alt"></i>+977 9852075322
+                    </p>
+                    <p><i class="fa fa-envelope"></i>info@p-lunia.com</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                    <div class="right-side">
-                        <h3>Newsletter</h3>
-                        <p>Subscribe to our newsletter for latest updates,financial tips,and insights.Join our community and
-                            empower your financial journey! Sign up today!</p>
-                        <div class="form">
-                            <input class="form-control" placeholder="Your Email Address">
-                            <button class="btn">Submit</button>
-                        </div>
-                    </div>
+
                 </div>
-                <hr>
-                <div class="bottom-footer">
-                    <p>© 2025 <a href="index.html"> P. Lunia & Associates</a>,All Right Reserved.</p>
-                    <p> Designed By <a href="https://www.velociscore.com/">Velocis Core</a></p>
+                <div class="right-side">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for latest updates,financial tips,and insights.Join our community and
+                        empower your financial journey! Sign up today!</p>
+                    <div class="form">
+                        <input class="form-control" placeholder="Your Email Address">
+                        <button class="btn">Submit</button>
+                    </div>
                 </div>
             </div>
-        </footer>
+            <hr>
+            <div class="bottom-footer">
+                <p>© 2025 <a href="index.html"> P. Lunia & Associates</a>,All Right Reserved.</p>
+                <p> Designed By <a href="https://www.velociscore.com/">Velocis Core</a></p>
+            </div>
+        </div>
+    </footer>
     <!-- javascript for navbar -->
-<script>
-   //navbar
-   function toggle() {
+    <script>
+        //navbar
+        function toggle() {
             document.getElementById("menu").classList.toggle("show");
         }
-</script>
+
+        //vision and mission buttton switch
+        function switchTab(tabId) {
+
+            const contents = document.querySelectorAll('.tab-content');
+            const buttons = document.querySelectorAll('.tab-button');
+
+            // Remove "show" class from all tab contents
+            for (const content of contents) {
+                content.classList.remove("show");
+            }
+
+            // Remove "active" class from all buttons
+            for (const button of buttons) {
+                button.classList.remove("active");
+            }
+
+            // Add "show" class to selected tab and "active" class to the button
+            document.getElementById(tabId).classList.add("show");
+            document.getElementById(tabId + "-btn").classList.add("active");
+        }
+    </script>
 </body>
 
 </html>

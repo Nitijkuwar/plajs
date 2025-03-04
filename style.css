@@ -82,35 +82,34 @@ a {
 }
 
 /* MAIN navbar */
-    .navlink {
-        display: flex;
-        justify-content: right;
-        background-color: #092a49;
-        padding: 20px;
-        
-        position: sticky;
-        top: 0;
-    }
+.navlink {
+    display: flex;
+    justify-content: right;
+    background-color: #092a49;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
 
-    .navlink a {
-        font-family: "Lato", serif;
-        margin-right: 20px;
-        font-size: 20px;
-        text-transform: uppercase;
-    }
+.navlink a {
+    font-family: "Lato", serif;
+    margin-right: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
 
-    .navtoggle {
-        display: none;
-    }
+.navtoggle {
+    display: none;
+}
 
-    .menu {
-        display: flex;
-        column-gap: 40px;
-    }
+.menu {
+    display: flex;
+    column-gap: 40px;
+}
 
-    .navbar a:hover {
-        color: #0796f3;
-    }
+.navbar a:hover {
+    color: #0796f3;
+}
 
 /* Contact section */
 .container {
@@ -410,7 +409,7 @@ h2 {
     padding: 25px;
     border: 2px solid rgba(128, 128, 128, 0.19);
     text-align: center;
-    transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out;
 }
 
 .card1:hover {
@@ -425,12 +424,6 @@ h2 {
 }
 
 /* team section */
-.team-container {
-    /* width: 100%; */
-    margin: 50px 0px 50px 0px;
-
-}
-
 /* for text */
 .team-text {
 
@@ -455,6 +448,7 @@ h2 {
 .team-container {
     justify-content: center;
     display: flex;
+    margin: 50px 0px 50px 0px;
     /* max-width: 1400px; */
     /* margin: 20px auto; */
     flex-wrap: wrap;
@@ -549,20 +543,24 @@ h2 {
 
 /* Vision and Misssion */
 .bottom {
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
     margin-top: 50px;
 
-    button {
-        padding: 8px;
-        width: 80px;
-        margin-top: 50px;
-        border: 2px solid black;
+     .active {
+        background-color: #0251a4;
+        color: white;
     }
 
-    button:active {
-        background-color: #0796fe;
-        color: white;
+    .tab-button {
+        flex: 1;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: bold;
+        /* background: transparent; */
+        border: none;
+        cursor: pointer;
+        /* transition: background 0.3s, color 0.3s; */
     }
 }
 
@@ -598,6 +596,20 @@ h2 {
         left: 0rem;
         border: hidden;
     }
+}
+
+/* vision and mission container */
+/* vision main container */
+ /* vision main container */
+ .tab-content {
+    display: none;
+    font-size: 18px;
+    padding: 15px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.show {
+    display: block;
 }
 
 /* vision container */
