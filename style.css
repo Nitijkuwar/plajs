@@ -452,8 +452,10 @@ h2 {
 
 /* image container */
 .team-container {
-    justify-content: center;
+    /* justify-content: center; */
     display: flex;
+    max-width: 1400px;
+    margin: 20px auto;
     flex-wrap: wrap;
     gap: 40px 20px;
 }
@@ -474,8 +476,9 @@ h2 {
 
 .info {
     position: absolute;
+    box-shadow: 10px 10px 25px -10px #e5e5e5, -10px -10px 25px -10px #e5e5e5;
     bottom: -16px;
-    left: 25%;
+    left: 18%;
     width: 200px;
     border-radius: 14px;
     text-align: center;
