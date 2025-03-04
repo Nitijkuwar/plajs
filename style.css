@@ -86,7 +86,8 @@ a {
         display: flex;
         justify-content: right;
         background-color: #092a49;
-        padding: 10px;
+        padding: 20px;
+        
         position: sticky;
         top: 0;
     }
@@ -452,10 +453,10 @@ h2 {
 
 /* image container */
 .team-container {
-    /* justify-content: center; */
+    justify-content: center;
     display: flex;
-    max-width: 1400px;
-    margin: 20px auto;
+    /* max-width: 1400px; */
+    /* margin: 20px auto; */
     flex-wrap: wrap;
     gap: 40px 20px;
 }
