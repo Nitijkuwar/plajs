@@ -53,7 +53,7 @@
     </nav>
     <!-- Home page card -->
     <section class="slider-home">
-        <div class="slider">
+        <div class="slider fade">
             <div class="slider-img">
                 <img src="assets/images/home/homeslider-1.jfif" alt="home page" />
             </div>
@@ -67,7 +67,7 @@
                 </p>
             </div>
         </div>
-        <div class="slider">
+        <div class="slider fade">
             <div class="slider-img">
                 <img src="assets/images/home/homeslider-1.jfif" alt="home page" />
             </div>
@@ -83,7 +83,7 @@
             </div>
         </div>
 
-        <div class="slider">
+        <div class="slider fade">
             <div class="slider-img">
                 <img src="assets/images/home/homeslider-3.jfif" alt="home page" />
             </div>
@@ -101,6 +101,7 @@
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
     </section>
+    <!-- card -->
     <div class="home-card">
         <div class="home-team">
             <img src="assets/images/home/icon-4.png" alt="">
@@ -141,29 +142,34 @@
                 <div class="staff">
                     <i class="fa fa-user"></i>
                     <div>
-                        <h2 style="color: #0796f3;">22 <sup>+</sup></h2>
-                        <p style="color: #092a49;">Staff</p>
+                        <span class="counter" data-count="22">0</span>
+                        <sup>+</sup>
+
+                        <p>Staff</p>
                     </div>
                 </div>
                 <div class="staff">
                     <i class="fa fa-users"></i>
                     <div>
-                        <h2 style="color: #0796f3;">899 <sup>+</sup></h2>
-                        <p style="color: #092a49;">Our Client</p>
+                        <span class="counter" data-count="899">0</span>
+                        <sup>+</sup>
+                        <p>Our Client</p>
                     </div>
                 </div>
                 <div class="staff">
                     <i class="fa fa-check"></i>
                     <div>
-                        <h2 style="color: #0796f3;">700 <sup>+</sup></h2>
-                        <p style="color: #092a49;">Completed Projects</p>
+                        <span class="counter" data-count="700">0</span>
+                        <sup>+</sup>
+                        <p>Completed Projects</p>
                     </div>
                 </div>
                 <div class="staff">
                     <i class="fa fa-running"></i>
                     <div>
-                        <h2 style="color: #0796f3;">400 <sup>+</sup></h2>
-                        <p style="color: #092a49;">Running projects</p>
+                        <span class="counter" data-count="400">0</span>
+                        <sup></sup>
+                        <p>Running projects</p>
                     </div>
                 </div>
             </div>
@@ -269,29 +275,62 @@
     </footer>
     <!-- javascript -->
     <script>
+        //slider
         let slideIndex = 1;
         showSlides(slideIndex);
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
         function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("slider");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
+            // debugger
+            const slides = document.getElementsByClassName("slider");
+            // console.log("This is slides", slides);
+            // console.log("This is slides length", slides.length);
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            // console.log("This is first slideIndex", slideIndex);
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            // console.log("This is second slideIndex", slideIndex);
+            for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
+            // console.log("This is last slideIndex", slideIndex);
             slides[slideIndex - 1].style.display = "block";
         }
-
+        function plusSlides(n) {
+            // console.log("under pluseSlide function", slideIndex)
+            showSlides(slideIndex += n);
+        }
+        setInterval(() => {
+            plusSlides(1);
+        }, 5000);
         //navbar
         function toggle() {
             document.getElementById("menu").classList.toggle("show");
         }
+        // Counter functionality
+        document.addEventListener("DOMContentLoaded", function () {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(function (counter) {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-count');
+                    // console.log("target", target);
+                    const count = +counter.innerText;
+                    // console.log("count", count);
+
+                    const increment = target / 1000;  // Adjust the increment speed
+                    // console.log("increment", increment);
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        // console.log("counter.innerText", counter.innerText);
+                        setTimeout(updateCount, 100);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        });
     </script>
 
 </body>

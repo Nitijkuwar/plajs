@@ -294,7 +294,7 @@
 }
 
 /* about section */
-@media (max-width:1000px) and (min-width:768px) {
+@media (max-width:1000px) and (min-width:770px) {
    .about-top {
       flex-wrap: wrap;
       justify-content: center;
@@ -339,10 +339,10 @@
    }
 }
 
-@media (max-width:768px) and (min-width:500px) {
+@media (max-width:770px) and (min-width:500px) {
    .about-top {
       flex-wrap: wrap;
-      width: 85%;
+      /* width: 85%; */
       height: auto;
       justify-content: normal;
       row-gap: 20px;
@@ -358,8 +358,8 @@
    /* image  */
    .about-relative img {
       margin-left: 20px;
-      height: 400px;
-      width: 400px;
+      height: max-content;
+      width: 480px;
    }
 
    .about-absolute img {
@@ -371,6 +371,7 @@
    /* text */
    .about-text {
       width: 100%;
+      margin: 20px;
 
       .paragraph p {
          font-size: 15px;
@@ -449,6 +450,7 @@
    /* mission */
    .mission h4 {
       margin-top: 20px;
+      text-align: left;
    }
 
    .mission-img {
@@ -485,13 +487,9 @@
 
    }
 
-   .bottom {
-      display: none;
+   .bottom h2 {
+      font-size: 20px;
    }
-
-   /* .vision-container {
-      margin-top: 50px;
-   } */
 
    .vision-absolute {
       margin: 20px 10px 0px 10px;
@@ -791,12 +789,6 @@
 }
 
 @media (max-width:790px) and (min-width:500px) {
-   .team-container {
-
-      /* column-gap: 20px; */
-      /* margin: 50px 10px; */
-   }
-
    .image-wrapper img {
       width: 200px;
       height: 250px;
