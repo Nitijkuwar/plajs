@@ -212,9 +212,9 @@
     </section>
 
     <section>
-        <div class="home-client">
-            <h2>Our major client</h2>
-            <div class="client-image">
+        <div class="client">
+            <h2>Our Major Clients</h2>
+            <div class="partners" id="partnerContainer">
                 <img src="assets/images/home/client/1.png" alt="clientimage">
                 <img src="assets/images/home/client/2.png" alt="clientimage">
                 <img src="assets/images/home/client/3.png" alt="clientimage">
@@ -229,6 +229,12 @@
                 <img src="assets/images/home/client/12.jpg" alt="clientimage">
                 <img src="assets/images/home/client/13.jpg" alt="clientimage">
                 <img src="assets/images/home/client/14.jpg" alt="clientimage">
+            </div>
+
+            <!-- Arrow Buttons Below Images -->
+            <div class="slider-controls">
+                <a id="prevBtn">⟵</a>
+                <a id="nextBtn">⟶</a>
             </div>
         </div>
     </section>
@@ -331,6 +337,37 @@
                 updateCount();
             });
         });
+
+        //client
+        const logos = Array.from(document.querySelectorAll("#partnerContainer img"));
+        const total = logos.length;
+        const visibleCount = 7; // Show 7 logos at a time
+        let startIndex = 0;
+
+        function updateDisplay() {
+            logos.forEach((logo, i) => {
+                logo.style.display = "none"; // Hide all by default
+            });
+
+            for (let i = 0; i < visibleCount; i++) {
+                const index = (startIndex + i) % total;
+                logos[index].style.display = "inline-block";
+            }
+        }
+
+        document.getElementById("nextBtn").addEventListener("click", () => {
+            startIndex = (startIndex + 1) % total;
+            updateDisplay();
+        });
+
+        document.getElementById("prevBtn").addEventListener("click", () => {
+            startIndex = (startIndex - 1 + total) % total;
+            updateDisplay();
+        });
+
+        // Initial display
+        updateDisplay();
+
     </script>
 
 </body>
